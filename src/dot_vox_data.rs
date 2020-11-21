@@ -3,7 +3,7 @@ use {Material, Model};
 use std::io::{self, Write};
 
 /// Container for .vox file data
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct DotVoxData {
     /// The version number of the .vox file.
     pub version: u32,

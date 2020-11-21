@@ -4,6 +4,7 @@ use nom::types::CompleteByteSlice;
 use std::collections::HashMap;
 use std::str;
 use std::str::Utf8Error;
+use serde::{Deserialize, Serialize};
 
 const MAGIC_NUMBER: &'static str = "VOX ";
 
@@ -20,7 +21,7 @@ pub enum Chunk {
 }
 
 /// A material used to render this model.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Material {
     /// The Material's ID
     pub id: u32,

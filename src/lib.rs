@@ -10,6 +10,8 @@ extern crate lazy_static;
 extern crate log;
 #[macro_use]
 extern crate nom;
+#[macro_use]
+extern crate serde;
 
 #[cfg(test)]
 extern crate avow;
